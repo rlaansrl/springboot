@@ -1,9 +1,9 @@
-package com.example.demo.entity;
+package com.example.demo.repository;
 
 import javax.persistence.*;
 import lombok.*;
 
-@NoArgsConstructor(access = AccessLevel.PUBLIC)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
 public class Users{
@@ -12,12 +12,16 @@ public class Users{
     @GeneratedValue
     private Long id;
 
+    @Column(length = 500,nullable = false)
     private String userId;
+
 
     private String userPw;
 
+
     private String name;
 
+  
     private String email;
 
 
